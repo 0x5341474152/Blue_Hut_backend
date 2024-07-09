@@ -7,6 +7,8 @@ const hoteladded=require('./routes/dataimport.router')
 const categoryadded=require('./routes/categoryimport.router')
 const atr=require("./routes/auth.router")
 const shr=require("./routes/singlehotel.router")
+const cors = require('cors');
+app.use(cors());
 const app=express();
 app.use(express.json());
 connectdb();
