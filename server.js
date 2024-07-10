@@ -12,13 +12,9 @@ const shr = require('./routes/singlehotel.router');
 const app = express();
 
 // CORS Middleware
-app.use(cors());
-app.use((req, res, next) => {
-  res.header('Access-Control-Allow-Origin', '*');
-  res.header('Access-Control-Allow-Methods', 'POST, GET, OPTIONS, PUT, DELETE');
-  res.header('Access-Control-Allow-Headers', 'Content-Type, X-Auth-Token, Origin, Authorization');
-  next();
-});
+app.use(cors({
+  origin:"http://localhost:3000",
+}));
 
 // Middleware
 app.use(express.json());
